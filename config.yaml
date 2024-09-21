@@ -1,0 +1,28 @@
+scan:
+  max_depth: 3
+  max_urls: 100
+  request_delay: 0.5
+  timeout: 10
+  user_agent: "BugBountyRecon/1.0"
+  concurrent_requests: 20
+
+vulnerabilities:
+  check_xss: true
+  check_sqli: true
+  check_open_redirect: true
+  check_file_inclusion: true
+
+api:
+  enabled: true
+  port: 8080
+
+database:
+  enabled: true
+  type: sqlite
+  path: ./bugbounty.db
+
+reporting:
+  formats:
+    - json
+    - pdf
+    - html
